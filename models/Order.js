@@ -1,11 +1,11 @@
 const mongoose= require("mongoose")
 
 const orderSchema= new mongoose.Schema({
-    orderNumber:{
+    /*orderNumber:{
         type: String,
         required: true,
         unique: true
-    },
+    },*/
     userId:{
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
@@ -56,9 +56,11 @@ const orderSchema= new mongoose.Schema({
         color:{type: String}
     }],
     shippingAddress:{
-        fullname: {type: String, required: true},
+        fullName: {type: String, required: true},
         phone:{type: String, required: true},
         address:{type: String, required: true},
+        block:{type:String},
+        roadNumber:{type: String},
         city:{type: String, required: true},
         country:{type: String, required: true}
     },

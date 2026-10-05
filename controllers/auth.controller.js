@@ -48,7 +48,7 @@ async function signUp(req, res) {
     }
     if (err.code === 11000) {
       return res.status(409).json({
-        message: "Username already exists",
+        message: "Email or phone number already exists",
       });
     }
 
